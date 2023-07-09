@@ -1,0 +1,159 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+
+import ContactCTA from "../components/ContactCTA.astro";
+import Hero from "../components/Hero.astro";
+---
+
+<BaseLayout
+  title="Sobre | Manoel Freitas"
+  description="Sobre Manoel Freitas Lorem Ipsum"
+>
+  <div class="stack gap-20">
+    <main class="wrapper about">
+      <Hero
+        title="Sobre mim"
+        tagline="Obrigado por parar para ler, Abaixo você pode saber mais sobre mim e sobre meu background."
+      >
+        <img
+          width="1553"
+          height="873"
+          src="/assets/projetos/at-work.jpg"
+          alt="Manoel Freitas"
+        />
+      </Hero>
+
+      <section>
+        <h2 class="section-title">Background</h2>
+        <div class="content">
+          <p>
+            Com uma sólida trajetória profissional no desenvolvimento de
+            software e liderança técnica, adquiri experiência valiosa em
+            empresas renomadas, como Itaú, Accenture e algumas startups. Ao
+            longo dos anos, tive a oportunidade de trabalhar em projetos
+            desafiadores, que me permitiram aprimorar minhas habilidades
+            técnicas e liderar equipes talentosas.
+          </p>
+          <p>
+            Na Accenture, atuei como desenvolvedor Front End, participando de
+            projetos cruciais para o sucesso de clientes variados. Colaborei no
+            desenvolvimento de aplicações web e móveis, utilizando tecnologias
+            como JavaScript, Java e frameworks modernos.
+          </p>
+          <p>
+            Posteriormente, no Itaú, comecei minha carreira como líder técnico,
+            trabalhando em projetos de grande escala para a instuticao. Sou
+            responsável por liderar equipes multidisciplinares, orientando-as no
+            desenvolvimento de software e garantindo a excelência técnica. Minha
+            expertise em JavaScript e Java foi essencial para enfrentar desafios
+            complexos e entregar soluções inovadoras que atendessem às
+            necessidades dos clientes.
+          </p>
+          <p>
+            Ao longo desse percurso profissional, desenvolvi uma sólida base
+            técnica, combinada com habilidades de liderança. Minha capacidade de
+            compreender as necessidades estratégicas dos projetos, juntamente
+            com minha orientação para soluções eficientes e inovadoras, me
+            permitiu desempenhar um papel-chave no sucesso de equipes e na
+            entrega de resultados de alto nível para as empresas onde atuei.
+          </p>
+        </div>
+      </section>
+      <section>
+        <h2 class="section-title">Educacão</h2>
+        <div class="content">
+          <p>
+            Sou formado em Analise e Desenvolvimento de Sistemas pela
+            Fametro(Faculdade Metropolitana de Fortaleza). Também aprimorei meus
+            conhecimento com cursos de plataformas conhecidas como: K21, Alura e
+            Udemy.
+          </p>
+        </div>
+      </section>
+      <section>
+        <h2 class="section-title">Skills</h2>
+        <div class="content">
+          <p>
+            Ao longo dos anos passei por varias linguagens utilizadas em
+            diversos projetos, adquirindo skills como:
+            <ul>
+              <li class="spec">JavaScript (cujo acabei me especializando)</li>
+              <li class="spec">Java (cujo acabei me especializando)</li>
+              <li>Ruby</li>
+              <li>Wordpress</li>
+              <li>PHP</li>
+              <li>Banco de dados relacionais e não relacionais</li>
+              <li>Cloud AWS</li>
+            </ul>
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <ContactCTA />
+  </div>
+</BaseLayout>
+
+<style>
+  .about {
+    display: flex;
+    flex-direction: column;
+    gap: 3.5rem;
+  }
+
+  img {
+    margin-top: 1.5rem;
+    border-radius: 1.5rem;
+    box-shadow: var(--shadow-md);
+  }
+
+  section {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    color: var(--gray-200);
+  }
+
+  .section-title {
+    grid-column-start: 1;
+    font-size: var(--text-xl);
+    color: var(--gray-0);
+  }
+
+  .content {
+    grid-column: 2 / 4;
+  }
+
+  .content :global(a) {
+    text-decoration: 1px solid underline transparent;
+    text-underline-offset: 0.25em;
+    transition: text-decoration-color var(--theme-transition);
+  }
+
+  .content :global(a:hover),
+  .content :global(a:focus) {
+    text-decoration-color: currentColor;
+  }
+  .content ul {
+    list-style: none;
+  }
+  .content ul .spec {
+    color: var(--accent-regular);
+  }
+
+  @media (min-width: 50em) {
+    .about {
+      display: grid;
+      grid-template-columns: 1fr 60% 1fr;
+    }
+
+    .about > :global(:first-child) {
+      grid-column-start: 2;
+    }
+
+    section {
+      display: contents;
+      font-size: var(--text-lg);
+    }
+  }
+</style>
