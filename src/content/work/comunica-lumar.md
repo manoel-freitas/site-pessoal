@@ -1,7 +1,7 @@
 ---
 title: Site Comunica Lumar
 publishDate: 2019-12-01 00:00:00
-img: /assets/projetos/comunica-lumar-header.png
+img: /assets/projetos/comunica-lumar-header.webp
 img_alt: Imagem do site comunica-lumar.com.br
 description: |
   Landing page da empresa de marketing digital Comunica Lumar situada em Fortaleza Ceara
